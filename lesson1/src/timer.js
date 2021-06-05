@@ -1,15 +1,27 @@
 import {DateTime, Duration} from 'https://moment.github.io/luxon/es6/luxon.js';
 
+const timerResult = document.getElementById("timer__result");
+
 export function countdown(time) {
     let currentTime = DateTime.fromISO(time);
-
+debugger
     const timer = setInterval(() => {
         currentTime = currentTime.minus({seconds: 1});
-        console.log(currentTime.c.second)
+
         if (!(currentTime.c.hour || currentTime.c.minute || currentTime.c.second)) {
             clearInterval(timer);
-            console.log('finish')
+            timerResult.innerHTML = `<span>Finish</span>`
+            return
         }
+
+        timerResult.innerHTML = renderTimer(currentTime)
     }, 1000)
 
 }
+
+function renderTimer(time) {
+   return `<span> 
+             ${time.hour}:${time.minute}:${time.second}
+           </span>`
+}
+
