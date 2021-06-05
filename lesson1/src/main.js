@@ -28,12 +28,12 @@ timer.addEventListener("submit", handleTimer);
 
 function handleTimer(event) {
     event.preventDefault();
-
-    let { hour, minutes, seconds } = event.target.elements;
+    console.log(event.target.elements)
+    let { hours, minutes, seconds } = event.target.elements;
     // hour = hour.value
     // minutes = minutes.value
     // seconds = seconds.value
-    let time = `${hour.value}:${minutes.value}:${seconds.value}`
+    let time = `${hours.value}:${minutes.value}:${seconds.value}`
 
     const timeLeft = countdown(time);
     console.log(time)
