@@ -22,7 +22,7 @@ function handleCalcDates(event) {
 }
 
 const timer = document.getElementById("timer");
-const timerResult = document.getElementById("timer__result");
+export const timerResult = document.getElementById("timer__result");
 
 timer.addEventListener("submit", handleTimer);
 
@@ -31,6 +31,8 @@ function handleTimer(event) {
     let { hours, minutes, seconds } = event.target.elements;
     let time = `${hours.value}:${minutes.value}:${seconds.value}`
 
-    countdown(time);
+    if (hours.value || minutes.value || seconds.value) {
+        countdown(time);
+    }  else timerResult.innerHTML = formatError("Установите таймер");
 
 }

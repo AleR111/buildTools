@@ -1,10 +1,9 @@
 import {DateTime, Duration} from 'https://moment.github.io/luxon/es6/luxon.js';
-
-const timerResult = document.getElementById("timer__result");
+import { timerResult } from "./main.js";
 
 export function countdown(time) {
     let currentTime = DateTime.fromISO(time);
-debugger
+
     const timer = setInterval(() => {
         currentTime = currentTime.minus({seconds: 1});
 
