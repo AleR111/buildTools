@@ -25,8 +25,16 @@
 <form id="timer">
     <h3>Таймер</h3>
     <label>
-        <strong>Время</strong>
-        <input type="time" name="time" step="24">
+        <strong>Часы</strong>
+        <input type="number" name="hour" required="" min="0" max="24">
+    </label>
+    <label>
+        <strong>Минуты</strong>
+        <input type="number" name="minutes" required="" min="0" max="60">
+    </label>
+    <label>
+        <strong>Секунды</strong>
+        <input type="number" name="seconds" required="" min="0" max="60">
     </label>
     <button type="submit">Старт</button>
     <p id="timer__result"></p>
