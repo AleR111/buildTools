@@ -1,7 +1,7 @@
 import { diffDates, diffToHtml } from "./datecalc.js";
 import { formatError } from "./utils.js";
 
-import { countdown } from "./timer.js";
+import { countdown, stopTimer } from "./timer.js";
 
 const dateCalcForm = document.getElementById("datecalc");
 const dateCalcResult = document.getElementById("datecalc__result");
@@ -23,8 +23,10 @@ function handleCalcDates(event) {
 
 const timer = document.getElementById("timer");
 export const timerResult = document.getElementById("timer__result");
+const btnStop = document.getElementById("stop-timer");
 
 timer.addEventListener("submit", handleTimer);
+btnStop.addEventListener("click", stopTimer);
 
 function handleTimer(event) {
     event.preventDefault();
