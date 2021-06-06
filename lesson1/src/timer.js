@@ -1,6 +1,6 @@
 import {DateTime, Duration} from 'https://moment.github.io/luxon/es6/luxon.js';
 import {timerResult} from "./main.js";
-import "https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.1/howler.js"
+import {sound} from "./sound.js"
 
 let currentTime = null;
 let timer = null
@@ -34,7 +34,3 @@ export function stopTimer() {
     console.log(123)
     clearInterval(timer);
 }
-
-const sound = new Howl({
-    src: ['./sound/sound.mp3']
-});
