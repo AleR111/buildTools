@@ -1,5 +1,6 @@
 import { diffDates, diffToHtml } from "./datecalc.js";
 import { formatError } from "./utils.js";
+import "./show.js";
 
 import { countdown, stopTimer } from "./timer.js";
 
