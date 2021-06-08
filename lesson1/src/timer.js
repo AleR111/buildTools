@@ -1,4 +1,4 @@
-import {DateTime, Duration} from 'https://moment.github.io/luxon/es6/luxon.js';
+const {DateTime} = require('luxon');
 import {timerResult} from "./main.js";
 import {sound} from "./sound.js"
 
