@@ -1,6 +1,6 @@
 import alarmSong from '../sound/sound.mp3'
 
-const {Howl, Howler} = require('howler');
+import {Howl} from 'howler/dist/howler.core.min';
 
 export const sound = new Howl({
     src: [alarmSong]
