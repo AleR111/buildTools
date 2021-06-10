@@ -3,7 +3,7 @@ import { diffDates, diffToHtml } from "./datecalc.js";
 import { formatError } from "./utils.js";
 import "./show.js";
 
-import { countdown, stopTimer } from "./timer.js";
+import { countdown, pauseTimer, stopTimer } from "./timer.js";
 
 const dateCalcForm = document.getElementById("datecalc");
 const dateCalcResult = document.getElementById("datecalc__result");
@@ -25,9 +25,11 @@ function handleCalcDates(event) {
 
 const timer = document.getElementById("timer");
 export const timerResult = document.getElementById("timer__result");
+const btnPause = document.getElementById("pause-timer");
 const btnStop = document.getElementById("stop-timer");
 
 timer.addEventListener("submit", handleTimer);
+btnPause.addEventListener("click", pauseTimer);
 btnStop.addEventListener("click", stopTimer);
 
 function handleTimer(event) {
