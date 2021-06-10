@@ -1,0 +1,10 @@
+@import 'calc.scss';
+@import 'timer.scss';
+
+button {
+  border: none;
+  background-color: #87b9e4;
+  &:hover {
+    background-color: #ff3e89;
+  }
+}

@@ -1,4 +1,4 @@
-import {DateTime, Duration} from 'https://moment.github.io/luxon/es6/luxon.js';
+const {DateTime} = require('luxon');
 import {timerResult} from "./main.js";
 import {sound} from "./sound.js"
 
@@ -6,6 +6,7 @@ let currentTime = null;
 let timer = null
 
 export function countdown(time) {
+    clearInterval(timer);
     if (!currentTime) currentTime = DateTime.fromISO(time);
     timer = setInterval(startCountdown, 1000)
 }
@@ -30,7 +31,12 @@ function renderTimer(time) {
            </span>`
 }
 
-export function stopTimer() {
+export function pauseTimer() {
     console.log(123)
+    clearInterval(timer);
+}
+
+export function stopTimer() {
+    currentTime = 0
     clearInterval(timer);
 }

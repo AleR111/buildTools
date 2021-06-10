@@ -1,5 +1,7 @@
-import "https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.1/howler.js"
+import alarmSong from '../sound/sound.mp3'
+
+import {Howl} from 'howler/dist/howler.core.min';
 
 export const sound = new Howl({
-    src: ['./sound/sound.mp3']
+    src: [alarmSong]
 });
